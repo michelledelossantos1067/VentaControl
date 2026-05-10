@@ -3,11 +3,41 @@ using VentaControl.Repositories;
 using Microsoft.EntityFrameworkCore;
 using VentaControl.Services;
 using VentaControl.Services.interfaces; 
-
-using Microsoft.EntityFrameworkCore;
-
+using Microsoft.AspNetCore.Authentication.JwtBearer;
+using Microsoft.IdentityModel.Tokens;
+using System.Text;
 var builder = WebApplication.CreateBuilder(args);
+var jwtConfig = builder.Configuration.GetSection("Jwt");
+var key = Encoding.UTF8.GetBytes(jwtConfig["Key"]!);
 
+builder.Services.AddAuthentication(JwtBearerDefaults.AuthenticationScheme)
+.AddJwtBearer(options =>{
+    options.TokenValidationParameters = new TokenValidationParameters{
+        ValidateIssuerSigningKey = true,
+            IssuerSigningKey = new SymmetricSecurityKey(key),
+            ValidateIssuer = true,
+            ValidIssuer = jwtConfig["Issuer"],
+            ValidateAudience = true,
+            ValidAudience = jwtConfig["Audience"],
+            ValidateLifetime = true,
+            ClockSkew = TimeSpan.Zero
+    };
+});
+builder.Services.AddAuthorization();
+builder.Services.AddDbContext<AppDbContext>(options =>
+    options.UseSqlServer(builder.Configuration.GetConnectionString("DefaultConnection"))
+);
+
+builder.Services.AddCors(options =>
+{
+    options.AddPolicy("AllowFrontend", policy =>
+    {
+        policy.WithOrigins("http://localhost:5173")
+              .AllowAnyHeader()
+              .AllowAnyMethod();
+    });
+});
+builder.Services.AddScoped<JwtService>();
 builder.Services.AddScoped<LoginServices>();
 
 builder.Services.AddScoped<IProductoService, ProductoService>();
@@ -25,10 +55,15 @@ builder.Services.AddScoped<IVentaRepositories, VentaRepositories>();
 builder.Services.AddScoped<IUsuarioService, UsuarioService>();
 builder.Services.AddScoped<IUsuarioRepositories, UsuarioRepositories>();
 
+builder.Services.AddControllers();
 
 var app = builder.Build();
 
 app.UseHttpsRedirection();
+app.UseCors("AllowFrontend");
+app.UseAuthentication();
+app.UseAuthorization();
+
 
 var summaries = new[]
 {
