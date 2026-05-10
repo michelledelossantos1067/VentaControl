@@ -1,0 +1,12 @@
+{
+  "Version": 1,
+  "Hash": "dAkmXuJ4aQCm/O9kpxO1GFPZpdX22zwcewmkcVzWKjk=",
+  "Source": "VentaControl.API",
+  "BasePath": "_content/VentaControl.API",
+  "Mode": "Default",
+  "ManifestType": "Build",
+  "ReferencedProjectsConfiguration": [],
+  "DiscoveryPatterns": [],
+  "Assets": [],
+  "Endpoints": []
+}

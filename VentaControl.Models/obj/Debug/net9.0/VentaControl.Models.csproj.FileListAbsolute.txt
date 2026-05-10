@@ -1,0 +1,11 @@
+/Users/dianny/Projects/VentaControl/VentaControl.Models/bin/Debug/net9.0/VentaControl.Models.deps.json
+/Users/dianny/Projects/VentaControl/VentaControl.Models/bin/Debug/net9.0/VentaControl.Models.dll
+/Users/dianny/Projects/VentaControl/VentaControl.Models/bin/Debug/net9.0/VentaControl.Models.pdb
+/Users/dianny/Projects/VentaControl/VentaControl.Models/obj/Debug/net9.0/VentaControl.Models.GeneratedMSBuildEditorConfig.editorconfig
+/Users/dianny/Projects/VentaControl/VentaControl.Models/obj/Debug/net9.0/VentaControl.Models.AssemblyInfoInputs.cache
+/Users/dianny/Projects/VentaControl/VentaControl.Models/obj/Debug/net9.0/VentaControl.Models.AssemblyInfo.cs
+/Users/dianny/Projects/VentaControl/VentaControl.Models/obj/Debug/net9.0/VentaControl.Models.csproj.CoreCompileInputs.cache
+/Users/dianny/Projects/VentaControl/VentaControl.Models/obj/Debug/net9.0/VentaControl.Models.dll
+/Users/dianny/Projects/VentaControl/VentaControl.Models/obj/Debug/net9.0/refint/VentaControl.Models.dll
+/Users/dianny/Projects/VentaControl/VentaControl.Models/obj/Debug/net9.0/VentaControl.Models.pdb
+/Users/dianny/Projects/VentaControl/VentaControl.Models/obj/Debug/net9.0/ref/VentaControl.Models.dll
