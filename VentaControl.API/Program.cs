@@ -1,8 +1,30 @@
+using VentaControl.Repositories.interfaces;
+using VentaControl.Repositories;
+using Microsoft.EntityFrameworkCore;
+using VentaControl.Services;
+using VentaControl.Services.interfaces; 
+
 using Microsoft.EntityFrameworkCore;
 
 var builder = WebApplication.CreateBuilder(args);
 
-builder.Services.AddControllers();
+builder.Services.AddScoped<LoginServices>();
+
+builder.Services.AddScoped<IProductoService, ProductoService>();
+builder.Services.AddScoped<IProductosRepositories, ProductoRepositories>();
+
+builder.Services.AddScoped<IClienteService, ClienteService>();
+builder.Services.AddScoped<IClientesRepositories, ClienteRepositories>();
+
+builder.Services.AddScoped<IDetalleVentaService, DetalleVentaService>();
+builder.Services.AddScoped<IDetalleVentaRepositories, DetalleVentaRepositories>();
+
+builder.Services.AddScoped<IVentaService, VentaService>();
+builder.Services.AddScoped<IVentaRepositories, VentaRepositories>();
+
+builder.Services.AddScoped<IUsuarioService, UsuarioService>();
+builder.Services.AddScoped<IUsuarioRepositories, UsuarioRepositories>();
+
 
 var app = builder.Build();
 
