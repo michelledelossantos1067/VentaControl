@@ -1,0 +1,40 @@
+﻿<Properties StartupConfiguration="{9CCA2C5A-1EB2-4E22-8FED-AE397B3F3639}|https">
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+  <MonoDevelop.Ide.ItemProperties.VentaControl FirstBuild="True" PreferredExecutionTarget="/Applications/Google Chrome.app" />
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MonoDevelop.Ide.Workbench ActiveDocument="VentaControl.Repositories/AppDbContext.cs">
+    <Files>
+      <File FileName="VentaControl.API/VentaControl.API.http" />
+      <File FileName="VentaControl.API/Program.cs" />
+      <File FileName="VentaControl.Models/Venta.cs" />
+      <File FileName="VentaControl.Models/DetalleVenta.cs" />
+      <File FileName="VentaControl.Models/Clientes.cs" />
+      <File FileName="VentaControl.Models/Productos.cs" />
+      <File FileName="VentaControl.Models/Dto/ClientesDto.cs" />
+      <File FileName="VentaControl.Models/Dto/DetalleVentaDto.cs" />
+      <File FileName="VentaControl.Models/Dto/ProductosDto.cs" />
+      <File FileName="VentaControl.Models/Dto/VentasDto.cs" />
+      <File FileName="VentaControl.API/appsettings.json" />
+      <File FileName="VentaControl.API/appsettings.Development.json" />
+      <File FileName="VentaControl.Repositories/AppDbContext.cs" Line="1" Column="1" />
+    </Files>
+    <Pads>
+      <Pad Id="ProjectPad">
+        <State name="__root__">
+          <Node name="VentaControl" expanded="True">
+            <Node name="VentaControl.API" expanded="True" />
+            <Node name="VentaControl.Models" expanded="True" />
+            <Node name="VentaControl.Repositories" expanded="True">
+              <Node name="AppDbContext.cs" selected="True" />
+            </Node>
+            <Node name="VentaControl.Services" expanded="True" />
+          </Node>
+        </State>
+      </Pad>
+    </Pads>
+  </MonoDevelop.Ide.Workbench>
+  <MultiItemStartupConfigurations />
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+</Properties>

@@ -1,0 +1,15 @@
+/Users/dianny/Projects/VentaControl/VentaControl.Repositories/bin/Debug/net9.0/VentaControl.Repositories.deps.json
+/Users/dianny/Projects/VentaControl/VentaControl.Repositories/bin/Debug/net9.0/VentaControl.Repositories.dll
+/Users/dianny/Projects/VentaControl/VentaControl.Repositories/bin/Debug/net9.0/VentaControl.Repositories.pdb
+/Users/dianny/Projects/VentaControl/VentaControl.Repositories/bin/Debug/net9.0/VentaControl.Models.dll
+/Users/dianny/Projects/VentaControl/VentaControl.Repositories/bin/Debug/net9.0/VentaControl.Models.pdb
+/Users/dianny/Projects/VentaControl/VentaControl.Repositories/obj/Debug/net9.0/VentaControl.Repositories.csproj.AssemblyReference.cache
+/Users/dianny/Projects/VentaControl/VentaControl.Repositories/obj/Debug/net9.0/VentaControl.Repositories.GeneratedMSBuildEditorConfig.editorconfig
+/Users/dianny/Projects/VentaControl/VentaControl.Repositories/obj/Debug/net9.0/VentaControl.Repositories.AssemblyInfoInputs.cache
+/Users/dianny/Projects/VentaControl/VentaControl.Repositories/obj/Debug/net9.0/VentaControl.Repositories.AssemblyInfo.cs
+/Users/dianny/Projects/VentaControl/VentaControl.Repositories/obj/Debug/net9.0/VentaControl.Repositories.csproj.CoreCompileInputs.cache
+/Users/dianny/Projects/VentaControl/VentaControl.Repositories/obj/Debug/net9.0/VentaCon.F185DB23.Up2Date
+/Users/dianny/Projects/VentaControl/VentaControl.Repositories/obj/Debug/net9.0/VentaControl.Repositories.dll
+/Users/dianny/Projects/VentaControl/VentaControl.Repositories/obj/Debug/net9.0/refint/VentaControl.Repositories.dll
+/Users/dianny/Projects/VentaControl/VentaControl.Repositories/obj/Debug/net9.0/VentaControl.Repositories.pdb
+/Users/dianny/Projects/VentaControl/VentaControl.Repositories/obj/Debug/net9.0/ref/VentaControl.Repositories.dll
