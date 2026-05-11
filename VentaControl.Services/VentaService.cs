@@ -41,6 +41,9 @@ public class VentaService: IVentaService{
 
         await _repository.Actualizar(Id,venta);
     }
+    public async Task<List<VentasVerDto>> ObtenerTodosConCliente(){
+        return await _repository.ObtenerTodosConCliente();
+    }
     public async Task Eliminar(int Id){
         var venta = await _repository.ObtenerPorId(Id);
         if (venta == null){

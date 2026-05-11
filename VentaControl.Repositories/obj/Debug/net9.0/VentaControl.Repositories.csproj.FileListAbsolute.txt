@@ -13,3 +13,4 @@
 /Users/dianny/Projects/VentaControl/VentaControl.Repositories/obj/Debug/net9.0/refint/VentaControl.Repositories.dll
 /Users/dianny/Projects/VentaControl/VentaControl.Repositories/obj/Debug/net9.0/VentaControl.Repositories.pdb
 /Users/dianny/Projects/VentaControl/VentaControl.Repositories/obj/Debug/net9.0/ref/VentaControl.Repositories.dll
+/Users/dianny/Projects/VentaControl/VentaControl.Repositories/obj/Debug/net9.0/VentaControl.Repositories.sourcelink.json

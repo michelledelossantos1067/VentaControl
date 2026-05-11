@@ -9,4 +9,5 @@ public interface IDetalleVentaService {
     Task Crear(DetalleVentaCrearDto detalleVentaCrearDto);
     Task Actualizar(int Id, DetalleVentaCrearDto detalleVentaCrearDto);
     Task Eliminar(int Id);
+    Task<List<DetalleVentaVerDto>> ObtenerTodosConDetalle();
 }

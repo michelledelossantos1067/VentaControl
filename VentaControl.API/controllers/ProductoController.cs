@@ -36,12 +36,12 @@ public class ProductoController : ControllerBase{
     }
 
     [HttpPut("{Id}")]
-    public async Task<IActionResult> Actualizar(int Id,[FromBody] ProductoDto productoDto){
+    public async Task<IActionResult> Actualizar([FromRoute]int Id,[FromBody] ProductoDto productoDto){
         await _service.Actualizar(Id, productoDto);
         return NoContent();
     }
 
-    [HttpDelete]
+    [HttpDelete("{Id}")]
     public async Task<IActionResult> Eliminar(int Id){
         await _service.Eliminar(Id);
         return NoContent();

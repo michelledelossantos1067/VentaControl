@@ -19,6 +19,9 @@ public class DetalleVentaService: IDetalleVentaService{
         return await _repository.ObtenerPorId(Id);
 
     }
+    public async Task<List<DetalleVentaVerDto>> ObtenerTodosConDetalle(){
+        return await _repository.ObtenerTodosConDetalle();
+    }
     public async Task Crear(DetalleVentaCrearDto detalleVentaCrearDto){
         
         var detalleventa = new DetalleVenta{

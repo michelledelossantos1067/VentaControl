@@ -9,4 +9,5 @@ public interface IVentaService{
     Task<int> Crear(VentasCrearDto ventasCrearDto);
     Task Actualizar(int Id, VentasCrearDto ventasCrearDto);
     Task Eliminar(int Id);
+    Task<List<VentasVerDto>> ObtenerTodosConCliente();
 }

@@ -43,10 +43,14 @@ public class DetalleVentaController : ControllerBase{
         return NoContent();
 
     }
-    [HttpDelete]
+    [HttpDelete("{Id}")]
     public async Task<IActionResult> Eliminar(int Id){
         await _services.Eliminar(Id);
         return NoContent();
     }
+    [HttpGet("conDetalle")]
+    public async Task<IActionResult> ObtenerTodosConDetalle(){
+        var detalles = await _services.ObtenerTodosConDetalle();
+        return Ok(detalles);
+    }
 }
-    

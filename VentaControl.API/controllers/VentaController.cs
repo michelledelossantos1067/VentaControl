@@ -38,9 +38,14 @@ public class VentaController : ControllerBase{
         await _services.Actualizar(Id,ventaDto);
         return NoContent();
     }
-    [HttpDelete]
+    [HttpDelete("{Id}")]
     public async Task<IActionResult> Eliminar(int Id){
         await _services.Eliminar(Id);
         return NoContent();
+    }
+    [HttpGet("conCliente")]
+    public async Task<IActionResult> ObtenerTodosConCliente(){
+        var ventas = await _services.ObtenerTodosConCliente();
+        return Ok(ventas);
     }
 }

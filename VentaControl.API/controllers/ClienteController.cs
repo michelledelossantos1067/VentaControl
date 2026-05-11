@@ -50,7 +50,7 @@ public async Task<IActionResult> ObtenerPorEmail(string email)
         return NoContent();
 
     }
-    [HttpDelete]
+    [HttpDelete("{Id}")]
     public async Task<IActionResult> Eliminar(int Id){
         await _services.Eliminar(Id);
         return NoContent();

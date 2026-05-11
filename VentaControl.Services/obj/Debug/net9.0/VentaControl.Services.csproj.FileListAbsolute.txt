@@ -15,3 +15,4 @@
 /Users/dianny/Projects/VentaControl/VentaControl.Services/obj/Debug/net9.0/refint/VentaControl.Services.dll
 /Users/dianny/Projects/VentaControl/VentaControl.Services/obj/Debug/net9.0/VentaControl.Services.pdb
 /Users/dianny/Projects/VentaControl/VentaControl.Services/obj/Debug/net9.0/ref/VentaControl.Services.dll
+/Users/dianny/Projects/VentaControl/VentaControl.Services/obj/Debug/net9.0/VentaControl.Services.sourcelink.json

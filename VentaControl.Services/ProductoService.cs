@@ -30,6 +30,8 @@ public class ProductoService : IProductoService{
             Descripcion = ProductoDto.Descripcion,
             Precio = ProductoDto.Precio,
             Stock = ProductoDto.Stock,
+            ImagenUrl = ProductoDto.ImagenUrl
+
         };
         await _repository.Crear(producto);
     }
@@ -44,6 +46,8 @@ public class ProductoService : IProductoService{
         producto.Descripcion = productoDto.Descripcion;
         producto.Precio = productoDto.Precio;
         producto.Stock = productoDto.Stock;
+        producto.ImagenUrl = productoDto.ImagenUrl;
+
 
         await _repository.Actualizar(Id,producto);
     }

@@ -1,5 +1,6 @@
 using VentaControl.Repositories.interfaces;
 using VentaControl.Models;
+using VentaControl.Models.Dto;
 using Microsoft.EntityFrameworkCore;
 
 namespace VentaControl.Repositories;
@@ -13,6 +14,16 @@ public class VentaRepositories: IVentaRepositories {
 
     public async Task<List<Venta>> ObtenerTodos(){
         return await _context.Ventas.ToListAsync();
+    }
+    public async Task<List<VentasVerDto>> ObtenerTodosConCliente(){
+        return await _context.Ventas
+            .Include(v => v.Cliente)
+            .Select(v => new VentasVerDto {
+                Fecha = v.Fecha,
+                ClienteNombre = v.Cliente.Nombre,
+                Total = v.Total
+            })
+            .ToListAsync();
     }
     public async Task<Venta> ObtenerPorId(int Id){
         return await _context.Ventas.FindAsync(Id);

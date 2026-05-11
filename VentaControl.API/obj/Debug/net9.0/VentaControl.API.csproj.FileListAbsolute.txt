@@ -170,3 +170,4 @@
 /Users/dianny/Projects/VentaControl/VentaControl.API/obj/Debug/net9.0/VentaControl.API.pdb
 /Users/dianny/Projects/VentaControl/VentaControl.API/obj/Debug/net9.0/VentaControl.API.genruntimeconfig.cache
 /Users/dianny/Projects/VentaControl/VentaControl.API/obj/Debug/net9.0/ref/VentaControl.API.dll
+/Users/dianny/Projects/VentaControl/VentaControl.API/obj/Debug/net9.0/VentaControl.API.sourcelink.json
