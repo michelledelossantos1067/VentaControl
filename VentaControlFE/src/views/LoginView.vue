@@ -62,16 +62,14 @@
         <div class="text-center mt-4">
           <small class="text-muted">
             ¿No tienes cuenta?
-            <a href="#" class="text-decoration-none fw-semibold">
+            <RouterLink to="/registro" class="text-decoration-none fw-semibold">
               Regístrate
-            </a>
+            </RouterLink>
           </small>
         </div>
-
+        </div>
       </div>
     </div>
-
-  </div>
 </template>
 
 <style scoped>

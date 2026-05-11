@@ -96,9 +96,9 @@
         <div class="text-center mt-4">
           <small class="text-muted">
             ¿Ya tienes cuenta?
-            <a href="#" class="text-decoration-none fw-semibold">
+            <RouterLink to="/login" class="text-decoration-none fw-semibold">
               Inicia sesión
-            </a>
+            </RouterLink>
           </small>
         </div>
 
