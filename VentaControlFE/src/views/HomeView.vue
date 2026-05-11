@@ -1,8 +1,8 @@
 <template>
-  <div class="container py-5">
+  <div class="container py-3 py-md-5">
     <!-- Cards -->
     <div class="row g-4">
-      <div class="col-lg-4 col-md-6" v-for="producto in productos" :key="producto.id">
+      <div class="col-12 col-md-6 col-lg-4" v-for="producto in productos" :key="producto.id">
         <div class="card h-100 border-0 shadow-sm producto-card">
 
           <!-- Imagen -->
@@ -28,7 +28,7 @@
             </div>
 
             <!-- Botones -->
-            <div class="d-flex gap-2">
+            <div class="d-flex flex-column flex-sm-row gap-2">
               <button class="btn btn-primary w-100" @click="verDetalle(producto.id)">
                 Ver detalle
               </button>
@@ -81,9 +81,29 @@ const verDetalle = (id: number) => {
   height: 220px;
   object-fit: cover;
 }
-
+.card-title,
+.card-text {
+  word-break: break-word;
+}
 .btn {
   border-radius: 10px;
+}
+
+.card-img-top {
+  height: 220px;
+}
+
+@media (max-width: 768px) {
+
+  .card-img-top {
+    height: 180px;
+  }
+}
+
+@media (max-width: 576px) {
+  .card-img-top {
+    height: 160px;
+  }
 }
 
 .input-group-text,
