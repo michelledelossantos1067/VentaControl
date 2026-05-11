@@ -1,4 +1,4 @@
-# VentaControl - Sistema de Gestión de Productos y Ventas
+# VentaControl
 
 ## Descripción
 
