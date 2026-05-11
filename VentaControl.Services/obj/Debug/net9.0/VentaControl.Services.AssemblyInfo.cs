@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("VentaControl.Services")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+d6c5ada1f9e7e2dd0c2ca4b8cf3cc7990a9cfe08")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+a483570b3b3ead1c23bcecdd7bc03503f0679f4b")]
 [assembly: System.Reflection.AssemblyProductAttribute("VentaControl.Services")]
 [assembly: System.Reflection.AssemblyTitleAttribute("VentaControl.Services")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

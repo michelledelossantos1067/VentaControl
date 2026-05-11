@@ -59,4 +59,15 @@ public class ProductoService : IProductoService{
         };
         await _repository.Eliminar(Id);
     }
+    public async Task ReducirStock(int Id, int cantidad){
+        var producto = await _repository.ObtenerPorId(Id);
+        if (producto == null){
+            throw new Exception("Producto no encontrado.");
+        }
+        if (producto.Stock < cantidad){
+            throw new Exception("Stock insuficiente.");
+        }
+        producto.Stock -= cantidad;
+        await _repository.Actualizar(Id, producto);
+    }
 }

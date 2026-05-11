@@ -2,6 +2,13 @@ import axios from 'axios'
 import { useAuthStore } from '../stores/authStore'
 const API_URL = 'http://localhost:5135'
 
+export const crearCliente = async (data: any) => {
+  const token = localStorage.getItem('token')
+  const response = await axios.post(`${API_URL}/api/Cliente`, data, {
+    headers: { Authorization: `Bearer ${token}` }
+  })
+  return response.data
+}
 export const obtenerClientePorEmail = async (email: string) => {
   const token = localStorage.getItem('token')
   const response = await axios.get(`${API_URL}/api/Cliente/porEmail/${email}`, {
