@@ -163,6 +163,32 @@ const telefono = ref('')
 const error = ref('')
 const router = useRouter()
 const handleRegistro = async () => {
+  error.value = ''
+  
+  if (!email.value) {
+    error.value = 'El email es requerido'
+    return
+  }
+  if (!email.value.includes('@')) {
+    error.value = 'El email no es válido'
+    return
+  }
+  if (!password.value) {
+    error.value = 'La contraseña es requerida'
+    return
+  }
+  if (password.value.length < 6) {
+    error.value = 'La contraseña debe tener al menos 6 caracteres'
+    return
+  }
+  if (!nombre.value) {
+    error.value = 'El nombre es requerido'
+    return
+  }
+  if (!telefono.value) {
+    error.value = 'El teléfono es requerido'
+    return
+  }
   try {
     await registro(email.value, password.value, nombre.value, telefono.value)
     router.push('/')

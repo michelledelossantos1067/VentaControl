@@ -125,6 +125,24 @@ const error = ref('')
 const authStore = useAuthStore()
 const router = useRouter()
 const handleLogin = async () => {
+  error.value = ''
+  
+  if (!email.value) {
+    error.value = 'El email es requerido'
+    return
+  }
+  if (!email.value.includes('@')) {
+    error.value = 'El email no es válido'
+    return
+  }
+  if (!password.value) {
+    error.value = 'La contraseña es requerida'
+    return
+  }
+  if (password.value.length < 6) {
+    error.value = 'La contraseña debe tener al menos 6 caracteres'
+    return
+  }
   try {
     await authStore.iniciarSesion(email.value, password.value)
     const rol = localStorage.getItem('rol')
