@@ -9,3 +9,4 @@
 /Users/dianny/Projects/VentaControl/VentaControl.Models/obj/Debug/net9.0/refint/VentaControl.Models.dll
 /Users/dianny/Projects/VentaControl/VentaControl.Models/obj/Debug/net9.0/VentaControl.Models.pdb
 /Users/dianny/Projects/VentaControl/VentaControl.Models/obj/Debug/net9.0/ref/VentaControl.Models.dll
+/Users/dianny/Projects/VentaControl/VentaControl.Models/obj/Debug/net9.0/VentaControl.Models.sourcelink.json
