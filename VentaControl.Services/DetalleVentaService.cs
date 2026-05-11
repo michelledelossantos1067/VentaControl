@@ -8,9 +8,11 @@ namespace VentaControl.Services;
 
 public class DetalleVentaService: IDetalleVentaService{
     private readonly IDetalleVentaRepositories _repository;
+    private readonly IProductosRepositories _productoRepository;
 
-    public DetalleVentaService (IDetalleVentaRepositories repository){
+    public DetalleVentaService (IDetalleVentaRepositories repository,IProductosRepositories productoRepository){
         _repository = repository;
+        _productoRepository = productoRepository;
     }
     public async Task<List<DetalleVenta>> ObtenerTodos(){
         return await _repository.ObtenerTodos();
@@ -30,7 +32,13 @@ public class DetalleVentaService: IDetalleVentaService{
             ProductoId= detalleVentaCrearDto.ProductoId,
             Cantidad= detalleVentaCrearDto.Cantidad,
         };
+        
         await _repository.Crear(detalleventa);
+        var producto = await _productoRepository.ObtenerPorId(detalleVentaCrearDto.ProductoId);
+        if (producto != null){
+            producto.Stock -= detalleVentaCrearDto.Cantidad;
+            await _productoRepository.Actualizar(producto.Id, producto);
+        }
     }
     public async Task Actualizar(int Id,DetalleVentaCrearDto detalleVentaCrearDto){
         var detalle = await _repository.ObtenerPorId(Id);

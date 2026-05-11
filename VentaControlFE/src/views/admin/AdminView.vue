@@ -6,6 +6,9 @@
         <h5 class="text-white mb-4">Admin Panel</h5>
         <ul class="nav flex-column">
           <li class="nav-item mb-2">
+            <button class="btn btn-outline-light w-100" @click="vista = 'usuarios'">Usuarios</button>
+          </li>
+          <li class="nav-item mb-2">
             <button class="btn btn-outline-light w-100" @click="vista = 'productos'">Productos</button>
           </li>
           <li class="nav-item mb-2">
@@ -24,9 +27,10 @@
       </div>
       <!-- Contenido -->
       <div class="col-md-10 p-4">
+        <UsuariosAdmin v-if="vista === 'usuarios'" />
         <ProductosAdmin v-if="vista === 'productos'" />
         <ClientesAdmin v-if="vista === 'clientes'" />
-         <DetalleVentasAdmin v-if="vista === 'detalledeventas'" />
+        <DetalleVentasAdmin v-if="vista === 'detalledeventas'" />
         <VentasAdmin v-if="vista === 'ventas'" />
       </div>
     </div>
@@ -37,6 +41,7 @@
 import { ref } from 'vue';
 import { useAuthStore } from '../../stores/authStore';
 import ProductosAdmin from '@/components/admin/ProductosAdmin.vue';
+import UsuariosAdmin from '@/components/admin/UsuariosAdmin.vue';
 import ClientesAdmin from '@/components/admin/ClientesAdmin.vue';
 import DetalleVentasAdmin from '@/components/admin/DetalleVentasAdmin.vue';
 import { useRouter } from 'vue-router'

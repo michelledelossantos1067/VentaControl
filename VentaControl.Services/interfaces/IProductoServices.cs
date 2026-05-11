@@ -8,6 +8,7 @@ public interface IProductoService
     Task<Producto> ObtenerPorId(int Id);
     Task Crear(ProductoDto productoDto);
     Task Actualizar(int Id, ProductoDto productoDto);
+    Task ReducirStock(int Id, int cantidad);
     Task Eliminar(int Id);
 
 }

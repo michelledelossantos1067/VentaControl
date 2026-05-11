@@ -32,6 +32,7 @@
           <td>{{ cliente.email }}</td>
            <td>{{ cliente.telefono }}</td>
           <td>
+            
             <button class="btn btn-sm btn-warning me-2" @click="editar(cliente)">Editar</button>
             <button class="btn btn-sm btn-danger" @click="eliminar(cliente.id)">Eliminar</button>
           </td>
