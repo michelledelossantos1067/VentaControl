@@ -61,15 +61,18 @@
                                             <span>Garantía incluida</span>
                                         </div>
                                         <!-- Cantidad -->
-<div class="mb-3">
-    <label class="form-label">Cantidad</label>
-    <input v-model="cantidad" type="number" min="1" :max="producto.stock" class="form-control" />
-</div>
+                                        <div class="mb-3">
+                                            <label class="form-label">Cantidad</label>
+                                            <input v-model="cantidad" type="number" min="1" :max="producto.stock"
+                                                class="form-control" />
+                                        </div>
+                                        <p class="text-danger" v-if="error">{{ error }}</p>
+
                                     </div>
 
                                     <!-- Botones -->
                                     <div class="d-flex gap-3 mt-auto">
-                                        
+
 
                                         <button class="btn btn-primary btn-lg flex-fill shadow-sm" @click="comprar">
                                             <i class="bi bi-cart-check me-2"></i>
@@ -116,17 +119,30 @@ const cantidad = ref(1)
 const producto = ref<Producto>({ id: 0, nombre: '', descripcion: '', precio: 0, stock: 0, imagenUrl: '' })
 const route = useRoute()
 const router = useRouter()
-const authStore = useAuthStore()
 const id = Number(route.params.id)
 
 onMounted(async () => {
     producto.value = await obtenerProductoPorId(id)
 })
-
+const error = ref('')
 const comprar = async () => {
     try {
         const email = localStorage.getItem('email')
         const cliente = await obtenerClientePorEmail(email!)
+        error.value = ''
+
+        if (!email) {
+            error.value = 'El email es requerido'
+            return
+        }
+        if (!cantidad.value || cantidad.value < 1) {
+            error.value = 'La cantidad debe ser al menos 1'
+            return
+        }
+        if (cantidad.value > producto.value.stock) {
+            error.value = `La cantidad no puede ser mayor a ${producto.value.stock}`
+            return
+        }
         const ventaCreada = await venta(new Date().toISOString(), cliente.id, producto.value.precio)
         await crearDetalleVenta(ventaCreada.id, producto.value.id, cantidad.value, producto.value.precio)
         router.push('/confirmacion')
