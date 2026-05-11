@@ -14,3 +14,5 @@
 /Users/dianny/Projects/VentaControl/VentaControl.Repositories/obj/Debug/net9.0/VentaControl.Repositories.pdb
 /Users/dianny/Projects/VentaControl/VentaControl.Repositories/obj/Debug/net9.0/ref/VentaControl.Repositories.dll
 /Users/dianny/Projects/VentaControl/VentaControl.Repositories/obj/Debug/net9.0/VentaControl.Repositories.sourcelink.json
+/Users/dianny/Projects/VentaControl/VentaControl.Repositories/bin/Debug/net9.0/VentaControl.Repositories.runtimeconfig.json
+/Users/dianny/Projects/VentaControl/VentaControl.Repositories/obj/Debug/net9.0/VentaControl.Repositories.genruntimeconfig.cache
